@@ -1,7 +1,9 @@
-from app.init import db
+from app import db
 
 
 class Client(db.Model):
+    __tablename__ = 'Client'
+
     client_id = db.Column(db.Integer, primary_key=True)
     identity_number = db.Column(db.Integer)
     age = db.Column(db.Integer)
@@ -13,3 +15,11 @@ class Client(db.Model):
         self.age = age
         self.client_name = client_name
         self.client_surname = client_surname
+
+    def serialize(self):
+        return {
+            'identity_number': self.identity_number,
+            'age': self.age,
+            'client_name': self.client_name,
+            'client_surname': self.client_surname,
+        }
