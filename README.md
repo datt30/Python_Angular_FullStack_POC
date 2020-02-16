@@ -11,11 +11,11 @@ A good proof of concept focused on a conventional scenario in which data interac
 During this proof of concept I used a local server and SQL Server Express distribution, but also you can use the distribution you prefer, just change the configuration present in
 api_poc_project/app/config.py
 
-SERVER = 'localhost\SQLEXPRESS'
-DATABASE = 'POC'
-DRIVER = 'SQL+Server'
-SQLALCHEMY_DATABASE_URI = f'mssql+pyodbc://{SERVER}/{DATABASE}?driver={DRIVER}'
-SQLALCHEMY_TRACK_MODIFICATIONS = False
+- SERVER = 'localhost\SQLEXPRESS'
+- DATABASE = 'POC'
+- DRIVER = 'SQL+Server' 
+- SQLALCHEMY_DATABASE_URI = f'mssql+pyodbc://{SERVER}/{DATABASE}?driver={DRIVER}'
+- SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 Also the scripts to create the tables and stored procedures are in the db_scripts folder
 
