@@ -1,5 +1,4 @@
 
-
 CREATE TABLE Client (
     client_id int NOT NULL IDENTITY PRIMARY KEY,
     identity_number int NOT NULL,
@@ -23,8 +22,7 @@ CREATE TABLE ExternalProvider (
 );
 
 CREATE TABLE ExternalProviderXProduct (
-    external_provider_id int NOT NULL IDENTITY PRIMARY KEY,
-    product_id int NOT NULL,
+    product_external_provider_id int NOT NULL IDENTITY PRIMARY KEY,
     price money,
     detail varchar(255),
     product_id int FOREIGN KEY REFERENCES Product(product_id),
