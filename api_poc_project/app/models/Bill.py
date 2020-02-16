@@ -13,3 +13,11 @@ class Bill(db.Model):
         self.taxes = taxes
         self.sub_total = sub_total
         self.total = total
+
+    def serialize(self):
+        return {
+            'bill_date':  self.bill_date,
+            'taxes': self.taxes,
+            'sub_total': self.sub_total,
+            'total': self.total
+        }

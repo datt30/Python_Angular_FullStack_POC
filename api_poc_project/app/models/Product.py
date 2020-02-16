@@ -11,3 +11,10 @@ class Product(db.Model):
         self.product_name = product_name
         self.price = price
         self.detail = detail
+
+    def serialize(self):
+        return {
+            'product_name': self.product_name,
+            'price': self.price,
+            'detail': self.detail
+        }

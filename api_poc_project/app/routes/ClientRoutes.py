@@ -5,13 +5,21 @@ from app import app, db
 
 @app.route('/poc/v1/clients/', methods=['GET'])
 def get_clients():
-    clientsList = clientModel.Client.query.all()
-    return jsonify({'clients': [client.serialize() for client in clientsList]}), 201
+    try:
+        clients_list = clientModel.Client.query.all()
+        return jsonify({'clients': [client.serialize() for client in clients_list]}), 201
+    except Exception as e:
+        # usually for server security, the error must be stored in a log,
+        # but for practical purposes of the poc we will show it in the response
+        return jsonify({'message': 'server error', 'error': str(e)}), 500
 
 
 @app.route('/poc/v1/client/<int:id>/', methods=['GET'])
 def get_client(id):
-    return jsonify({'client': clientModel.Client.query.get(id).serialize()}), 201
+    try:
+        return jsonify({'client': clientModel.Client.query.get(id).serialize()}), 201
+    except Exception as e:
+        return jsonify({'message': 'server error', 'error': str(e)}), 500
 
 
 @app.route('/poc/v1/client/', methods=['POST'])
@@ -32,8 +40,6 @@ def create_client():
             db.session.commit()
             return jsonify({'message': 'success'}), 201
         except Exception as e:
-            # usually for server security, the error must be stored in a log,
-            # but for practical purposes of the poc we will show it in the response
             return jsonify({'message': 'server error', 'error': str(e)}), 500
 
 
@@ -44,8 +50,6 @@ def delete_client(id):
         db.session.commit()
         return jsonify({'message': 'success delete'}), 201
     except Exception as e:
-        # usually for server security, the error must be stored in a log,
-        # but for practical purposes of the poc we will show it in the response
         return jsonify({'message': 'server error', 'error': str(e)}), 500
 
 
@@ -61,6 +65,4 @@ def update_client(id):
         db.session.commit()
         return jsonify({'message': 'success update'}), 201
     except Exception as e:
-        # usually for server security, the error must be stored in a log,
-        # but for practical purposes of the poc we will show it in the response
         return jsonify({'message': 'server error', 'error': str(e)}), 500

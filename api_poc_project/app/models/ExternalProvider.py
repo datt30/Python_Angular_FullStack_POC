@@ -11,3 +11,10 @@ class ExternalProvider(db.Model):
         self.external_provider_name = external_provider_name
         self.phone = phone
         self.detail = detail
+
+    def serialize(self):
+        return {
+            'external_provider_name': self.external_provider_name,
+            'phone': self.phone,
+            'detail': self.detail
+        }

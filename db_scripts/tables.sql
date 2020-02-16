@@ -9,8 +9,8 @@ CREATE TABLE Client (
 
 CREATE TABLE Product (
     product_id int NOT NULL IDENTITY PRIMARY KEY,
-    product_name varchar(25),
-    price money,
+    product_name varchar(25) NOT NULL,
+    price money NOT NULL,
     detail varchar(255)
 );
 

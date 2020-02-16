@@ -21,5 +21,5 @@ class Client(db.Model):
             'identity_number': self.identity_number,
             'age': self.age,
             'client_name': self.client_name,
-            'client_surname': self.client_surname,
+            'client_surname': self.client_surname
         }
