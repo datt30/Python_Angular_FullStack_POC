@@ -17,7 +17,7 @@ def get_external_providers():
 @app.route('/poc/v1/external-provider/<int:id>/', methods=['GET'])
 def get_external_provider(id):
     try:
-        return jsonify({'client': providerModel.ExternalProvider.query.get(id).serialize()}), 201
+        return jsonify({'provider': providerModel.ExternalProvider.query.get(id).serialize()}), 201
     except Exception as e:
         return jsonify({'message': 'server error', 'error': str(e)}), 500
 
