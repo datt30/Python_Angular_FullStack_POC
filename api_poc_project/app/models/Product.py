@@ -2,6 +2,8 @@ from app import db
 
 
 class Product(db.Model):
+    __tablename__ = 'Product'
+
     product_id = db.Column(db.Integer, primary_key=True)
     product_name = db.Column(db.String(25))
     price = db.Column(db.Integer)

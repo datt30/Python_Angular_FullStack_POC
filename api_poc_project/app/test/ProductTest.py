@@ -13,9 +13,10 @@ class ProductTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 201)
 
     def test_product_creation_01(self):
-        """ test product creation without price and product_name """
+        """ test product creation without price """
         test_product = {
-          'detail': self.detail
+          "product_name": "awesome product",
+          "detail": "quality product with hight comercial value!!"
         }
         response = app_tester.post(
           '/poc/v1/product/',

@@ -19,6 +19,16 @@ api_poc_project/app/config.py
 
 Also the scripts to create the tables and stored procedures are in the db_scripts folder
 
+# How to run the entire app?
+
+
+# Future improvements
+- Add central log register for tracking the errors and make troubleshooting application problems easily solved.
+- Add tokens to the API and management components.
+- Change default port, because port 5000 its not recomended for production.
+
+# Missing features
+
 
 # Notes:
 - All that you need from python libraries and packages it's present in requeriments.txt

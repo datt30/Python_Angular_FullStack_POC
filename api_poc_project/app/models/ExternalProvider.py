@@ -2,6 +2,8 @@ from app import db
 
 
 class ExternalProvider(db.Model):
+    __tablename__ = 'ExternalProvider'
+
     external_provider_id = db.Column(db.Integer, primary_key=True)
     external_provider_name = db.Column(db.String(25))
     phone = db.Column(db.Integer)

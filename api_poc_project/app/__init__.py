@@ -5,4 +5,7 @@ app = Flask(__name__)
 app.config.from_pyfile('config.py')
 db = SQLAlchemy(app)
 
-from app.routes import ClientRoutes
+from app.routes import \
+    ClientRoutes,\
+    ProductRoutes,\
+    ExternalProviderRoutes
