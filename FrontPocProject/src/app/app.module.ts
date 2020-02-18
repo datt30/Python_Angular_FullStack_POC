@@ -8,8 +8,8 @@ import { AppRoutingModule } from './/app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuHeaderComponent } from './components/menu-header/menu-header.component';
-import { environment } from '../environments/environment';
 import { DemoMaterialModule } from './material-module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,6 +25,7 @@ import { DemoMaterialModule } from './material-module';
     AppRoutingModule,
     BrowserAnimationsModule,
     DemoMaterialModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

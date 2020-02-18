@@ -7,7 +7,13 @@ import { MenuComponent } from './components/menu/menu.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'menu'},
   { path: 'menu', component: MenuComponent,
-    children: []  
+    children: [
+      {
+        path: 'clients',
+        loadChildren: () =>
+          import('./components/client/client.module').then(m=>m.ClientModule)
+      }
+    ]  
   }
 ];
 

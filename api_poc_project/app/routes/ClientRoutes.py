@@ -46,7 +46,7 @@ def create_client():
 @app.route('/poc/v1/client/<int:id>', methods=['DELETE'])
 def delete_client(id):
     try:
-        db.session.delete(clientModel.Client.query.get(id))
+        clientModel.Client.query.filter(clientModel.Client.identity_number == id).delete()
         db.session.commit()
         return jsonify({'message': 'success delete'}), 201
     except Exception as e:

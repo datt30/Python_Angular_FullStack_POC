@@ -18,8 +18,8 @@ class Client(db.Model):
 
     def serialize(self):
         return {
-            'identity_number': self.identity_number,
+            'identityNumber': self.identity_number,
             'age': self.age,
-            'client_name': self.client_name,
-            'client_surname': self.client_surname
+            'clientName': self.client_name,
+            'clientSurname': self.client_surname
         }
