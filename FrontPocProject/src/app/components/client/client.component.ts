@@ -56,15 +56,19 @@ export class ClientComponent implements OnInit{
   }
 
   updateRowData(row_obj){
+    var client = {
+      identityNumber: row_obj.identityNumber,
+      age: row_obj.age,
+      clientName: row_obj.clientName,
+      clientSurname: row_obj.clientSurname,
+    } as Client
     this.dataSource = this.dataSource.filter(value =>{
       if(value.identityNumber == row_obj.identityNumber){
-        value.identityNumber = row_obj.identityNumber,
-        value.age = row_obj.age,
-        value.clientName = row_obj.clientName,
-        value.clientSurname = row_obj.clientSurname
+        value = client;
       }
       return true;
     });
+    this.clientService.updateClient(client);
   }
 
   deleteRowData(row_obj){

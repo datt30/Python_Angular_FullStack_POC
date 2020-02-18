@@ -15,7 +15,7 @@ class ExternalProviderTestCase(unittest.TestCase):
     def test_external_provider_creation_01(self):
         """ test ExternalProvider creation without phone and detail """
         test_external_provider = {
-          "external_provider_name": "Cementos Argos"
+          "externalProviderName": "Cementos Argos"
         }
         response = app_tester.post(
           '/poc/v1/external-provider/',

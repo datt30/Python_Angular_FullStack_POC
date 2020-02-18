@@ -16,8 +16,8 @@ class ClientTestCase(unittest.TestCase):
         """ test client creation without identity_number """
         test_client = {
           "age": 25,
-          "client_name": "David",
-          "client_surname": "Tamayo",
+          "clientName": "David",
+          "clientSurname": "Tamayo",
         }
         response = app_tester.post(
           '/poc/v1/client/',

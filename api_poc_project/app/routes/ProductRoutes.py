@@ -31,7 +31,7 @@ def create_product():
     else:
         try:
             product = productModel.Product(
-                content['product_name'],
+                content['productName'],
                 content['price'],
                 content['detail']
             )
@@ -57,7 +57,7 @@ def update_product(id):
     content = request.json
     try:
         product = productModel.Product.query.get(id)
-        product.product_name = content['product_name']
+        product.product_name = content['productName']
         product.price = content['price']
         product.detail = content['detail']
         db.session.commit()

@@ -15,7 +15,7 @@ class ProductTestCase(unittest.TestCase):
     def test_product_creation_01(self):
         """ test product creation without price """
         test_product = {
-          "product_name": "awesome product",
+          "productName": "awesome product",
           "detail": "quality product with hight comercial value!!"
         }
         response = app_tester.post(

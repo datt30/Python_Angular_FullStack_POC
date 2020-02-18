@@ -26,17 +26,17 @@ def get_external_provider(id):
 def create_external_provider():
     content = request.json
 
-    if not content or not 'external_provider_name' in content:
+    if not content or not 'externalProviderName' in content:
         return jsonify({'message': 'bad request'}), 400
     else:
         try:
             if not 'phone' in content and not 'detail' in content:
                 external_provider = providerModel.ExternalProvider(
-                    content['external_provider_name'], "", ""
+                    content['externalProviderName'], "", ""
                 )
             else:
                 external_provider = providerModel.ExternalProvider(
-                    content['external_provider_name'],
+                    content['externalProviderName'],
                     content['phone'],
                     content['detail']
                 )
@@ -62,7 +62,7 @@ def update_external_provider(id):
     content = request.json
     try:
         external_provider = providerModel.ExternalProvider.query.get(id)
-        external_provider.external_provider_name = content['external_provider_name']
+        external_provider.external_provider_name = content['externalProviderName']
         external_provider.phone = content['phone']
         external_provider.detail = content['detail']
         db.session.commit()

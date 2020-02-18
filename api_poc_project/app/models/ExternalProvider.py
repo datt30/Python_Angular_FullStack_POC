@@ -16,7 +16,7 @@ class ExternalProvider(db.Model):
 
     def serialize(self):
         return {
-            'external_provider_name': self.external_provider_name,
+            'externalProviderName': self.external_provider_name,
             'phone': self.phone,
             'detail': self.detail
         }

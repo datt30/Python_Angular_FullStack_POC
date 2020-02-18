@@ -16,8 +16,8 @@ class Bill(db.Model):
 
     def serialize(self):
         return {
-            'bill_date':  self.bill_date,
+            'billDate':  self.bill_date,
             'taxes': self.taxes,
-            'sub_total': self.sub_total,
+            'subTotal': self.sub_total,
             'total': self.total
         }

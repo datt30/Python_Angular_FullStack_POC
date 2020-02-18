@@ -26,15 +26,15 @@ def get_client(id):
 def create_client():
     content = request.json
 
-    if not content or not 'identity_number' in content:
+    if not content or not 'identityNumber' in content:
         return jsonify({'message': 'bad request'}), 400
     else:
         try:
             client = clientModel.Client(
-                content['identity_number'],
+                content['identityNumber'],
                 content['age'],
-                content['client_name'],
-                content['client_surname'],
+                content['clientName'],
+                content['clientSurname'],
             )
             db.session.add(client)
             db.session.commit()
@@ -57,11 +57,11 @@ def delete_client(id):
 def update_client(id):
     content = request.json
     try:
-        client = clientModel.Client.query.get(id)
-        client.identity_number = content['identity_number']
+        client = clientModel.Client.query.filter(clientModel.Client.identity_number == id).one()
+        client.identity_number = content['identityNumber']
         client.age = content['age']
-        client.client_name = content['client_name']
-        client.client_surname = content['client_surname']
+        client.client_name = content['clientName']
+        client.client_surname = content['clientSurname']
         db.session.commit()
         return jsonify({'message': 'success update'}), 201
     except Exception as e:
