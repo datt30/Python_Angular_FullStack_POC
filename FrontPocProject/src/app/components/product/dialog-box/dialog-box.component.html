@@ -1,0 +1,25 @@
+<!-- dialog-box.component.html -->
+<h1 mat-dialog-title><strong>{{action}}</strong></h1>
+<form [formGroup]="form" class="fields-content" mat-dialog-content *ngIf="action != 'Delete'; else deleteTemplate">
+  
+  <mat-form-field>
+    <input placeholder="Product Name" matInput formControlName="productName" class="form-control">
+    <mat-error class="error-message" *ngIf="form.get('productName').errors">required field *</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input placeholder="Price" matInput formControlName="price" class="form-control">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input placeholder="Product Detail" matInput formControlName="detail" class="form-control">
+  </mat-form-field>
+
+</form>
+<ng-template #deleteTemplate>
+  Are you sure to delete this element? <b>{{local_data.productName}}</b>
+</ng-template>
+<div class="buttons-content" mat-dialog-actions>
+  <button mat-button (click)="doAction()">{{action}}</button>
+  <button mat-button (click)="closeDialog()" mat-flat-button>Cancel</button>
+</div>

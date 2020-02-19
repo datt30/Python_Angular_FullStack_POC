@@ -1,0 +1,18 @@
+<mat-sidenav-container class="menu-container">
+    <mat-sidenav class="menu-sidenav-container" #sidenav>
+        <button id="menu-btn-inside-menu" mat-button (click)="sidenav.toggle()" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+          <i class="material-icons">menu</i>
+        </button>
+        <app-menu-header></app-menu-header>
+        <mat-card [routerLink]="['clients']" class="menu-option">Clients</mat-card>
+        <mat-card [routerLink]="['products']" class="menu-option">Products</mat-card>
+    </mat-sidenav>
+      
+    <mat-sidenav-content>
+        <button id="menu-btn" mat-button (click)="sidenav.toggle()" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+            <i class="material-icons">menu</i>
+        </button>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

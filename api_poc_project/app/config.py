@@ -1,0 +1,7 @@
+
+# DB config
+SERVER = 'localhost\SQLEXPRESS'
+DATABASE = 'POC'
+DRIVER = 'SQL+Server'
+SQLALCHEMY_DATABASE_URI = f'mssql+pyodbc://{SERVER}/{DATABASE}?driver={DRIVER}'
+SQLALCHEMY_TRACK_MODIFICATIONS = False

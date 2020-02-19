@@ -1,0 +1,231 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import  url(https://fonts.googleapis.com/css?family=Roboto);
+
+.app-view {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    background: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 !important;
+}
+
+#log-out{
+  float: right;
+  background-color: #253746;
+  margin-right: 16px;
+  margin-top: -100px;
+}
+
+#menu-btn{
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #253746;
+}
+#menu-btn-inside-menu{
+    margin-top: 18px;
+    margin-right: 18px;
+    float: right;
+    background-color: #253746;
+}
+  
+#back{
+    float: left;
+    background-color: #253746;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+  
+#deleteDirBtn{
+    float: right;
+    background-color: #253746;
+}
+
+#editDirBtn{
+    margin-right: 5px;
+    float: right;
+    background-color: #253746;
+}
+  
+#header{
+    background-color:#253746;
+    width: 102%;
+    height: 95px;
+    margin-bottom: 20px;
+    margin-left: -8px;
+    margin-top: -8px;  
+}
+  
+#header img{
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+/*for change lineamientos list location*/
+.lineamientoSelectContent{
+   width: 210px;
+   margin-right: 1.5%;
+   margin-left: auto;
+}
+/*for change lineamientos list width*/
+.mat-form-field{
+   width: 100%;
+}
+
+.mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: #253746 !important;
+}
+.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: #253746 !important;
+} 
+.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: #253746 !important;
+}  
+
+/*styles for button to save changes in DB*/
+.btnSaveChangesContent{
+    width: 210px;
+    margin-right: 4px;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+ }
+.btn-save-changes{
+    width: 95%;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    color: white;
+    font-size: 130%;
+    background-color: #253746;
+}
+
+/*styles for Angular Tables with Material*/
+table {
+    width: 97%;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+}
+
+.mat-header-cell {
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    border-right: 1px solid #E0E0E0;
+}
+
+.mat-cell {
+    text-align: center;
+    justify-content:center;
+    font-size: 14px;
+    border-right: 1px solid #E0E0E0;
+    width: 80px;
+}
+
+.gray-background{
+    background: #efebe9;
+}
+/* END styles for Angular Tables with Material*/
+
+.text-area {
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+}
+
+#logo{
+   padding-top: 15px;
+}
+
+#title{
+    text-align: center;
+    color: white;
+    margin-top: -40px;
+}
+  
+#movil{
+    margin-left: 50px;
+    margin-top: 15px;
+    height: 600px;
+    width: 400px;
+}
+  
+.button{
+      background-color:#253746;
+      color: white;
+      border: none;
+      padding: 5px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 2px;
+      font-family: 'Roboto', sans-serif;
+}
+  
+.button:hover {
+    background-color:#e53935;
+    color: white;
+}
+  
+.contentSaveBtn{
+    text-align: right;
+}
+  
+.contentSaveBtn button{
+    background-color:#253746;
+    color: white;
+    border: none;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: inherit;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+  
+.button-menu {
+      box-shadow: 5px 10px 8px #888888;
+      height: 220px;
+      width: 220px;
+      margin-left: 27%;
+      margin-top: 50px;
+}
+  
+.disappear{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.buttons-acction-container{
+    text-align: center;
+}
+
+#add-btn{
+    float: right;
+    margin-top: 10px;
+    margin-right: 1.5%;
+    background-color: #253746;
+}
+
+#add-btn-mini{
+    float: right;
+}
+
+.input-calification{
+    width: 50%;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
