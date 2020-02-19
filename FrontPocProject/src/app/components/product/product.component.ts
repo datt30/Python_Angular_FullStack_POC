@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { productColumns, Product } from "src/app/models/product";
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatTable } from '@angular/material';
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { ProductService } from 'src/app/services/product/product.service';
 
@@ -17,7 +17,7 @@ export class ProductComponent implements OnInit{
   dataSource = [];
   displayedColumns = productColumns;
 
-
+  @ViewChild(MatTable,{static:true}) table: MatTable<any>;
   constructor(public dialog: MatDialog, private productService: ProductService) {}
 
   ngOnInit() {
@@ -52,6 +52,8 @@ export class ProductComponent implements OnInit{
     } as Product
     this.productService.createProduct(product);
     this.dataSource.push(product);
+    //for update table rows when changes
+    this.table.renderRows();
   }
 
   updateRowData(row_obj){
@@ -67,6 +69,8 @@ export class ProductComponent implements OnInit{
       return true;
     });
     this.productService.updateProduct(product);
+    //for update table rows when changes
+    this.table.renderRows();
   }
 
   deleteRowData(row_obj){
@@ -74,6 +78,8 @@ export class ProductComponent implements OnInit{
       return value.productName != row_obj.productName;
     });
     this.productService.deleteProduct(row_obj.productName);
+    //for update table rows when changes
+    this.table.renderRows();
   }
 
 

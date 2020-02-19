@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { clientColumns, Client } from "src/app/models/client";
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatTable } from '@angular/material';
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 import { ClientService } from 'src/app/services/client/client.service';
 
@@ -17,7 +17,7 @@ export class ClientComponent implements OnInit{
   dataSource = [];
   displayedColumns = clientColumns;
 
-
+  @ViewChild(MatTable,{static:true}) table: MatTable<any>;
   constructor(public dialog: MatDialog, private clientService: ClientService) {}
 
   ngOnInit() {
@@ -53,6 +53,8 @@ export class ClientComponent implements OnInit{
     } as Client
     this.clientService.createClient(client);
     this.dataSource.push(client);
+    //for update table rows when changes
+    this.table.renderRows();
   }
 
   updateRowData(row_obj){
@@ -69,6 +71,8 @@ export class ClientComponent implements OnInit{
       return true;
     });
     this.clientService.updateClient(client);
+    //for update table rows when changes
+    this.table.renderRows();
   }
 
   deleteRowData(row_obj){
@@ -76,6 +80,8 @@ export class ClientComponent implements OnInit{
       return value.identityNumber != row_obj.identityNumber;
     });
     this.clientService.deleteClient(row_obj.identityNumber);
+    //for update table rows when changes
+    this.table.renderRows();
   }
 
 
