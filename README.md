@@ -36,7 +36,7 @@ Also the scripts to create the tables and stored procedures are in the ScriptsDB
 - Python script to automatically run ng build command to generate single page integrated with flask in a blueprint. (DevOps improvement)
 
 # Missing features
-- DB stored procedures
+- call DB stored procedures from backend
 - components in Angular for Bill and ExternalProvider
 - API's control to foreign keys in DB
 

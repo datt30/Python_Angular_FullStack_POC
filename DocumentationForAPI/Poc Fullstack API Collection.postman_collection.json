@@ -23,10 +23,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n \"identity_number\":\"123456787\",\n \"age\": 40,\n \"client_name\": \"Will\",\n \"client_surname\": \"Ed\"\n}"
+							"raw": "{\n \"identityNumber\":\"1037\",\n \"age\": 25,\n \"clientName\": \"Dave\",\n \"clientSurname\": \"Tamayo\"\n}"
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/poc/v1/client",
+							"raw": "http://127.0.0.1:5000/poc/v1/client/",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -38,7 +38,8 @@
 							"path": [
 								"poc",
 								"v1",
-								"client"
+								"client",
+								""
 							]
 						}
 					},
@@ -112,7 +113,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/poc/v1/client/4",
+							"raw": "http://127.0.0.1:5000/poc/v1/client/54545",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -125,7 +126,7 @@
 								"poc",
 								"v1",
 								"client",
-								"4"
+								"54545"
 							]
 						}
 					},
@@ -145,10 +146,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"age\": 32,\n  \"client_name\": \"Will\",\n  \"client_surname\": \"Ed\",\n  \"identity_number\": 1460352\n}"
+							"raw": "{\n  \"age\": 35,\n  \"clientName\": \"William\",\n  \"clientSurname\": \"Ed\",\n  \"identityNumber\": 1460352\n}"
 						},
 						"url": {
-							"raw": "http://127.0.0.1:5000/poc/v1/client/3",
+							"raw": "http://127.0.0.1:5000/poc/v1/client/1460352",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -161,7 +162,7 @@
 								"poc",
 								"v1",
 								"client",
-								"3"
+								"1460352"
 							]
 						}
 					},
@@ -186,7 +187,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"product_name\": \"chaquet\",\r\n  \"price\": 120500,\r\n  \"detail\": \"jean chaquet high quality\"\r\n}"
+							"raw": "{\r\n  \"productName\": \"chaquet\",\r\n  \"price\": 120500,\r\n  \"detail\": \"jean chaquet high quality\"\r\n}"
 						},
 						"url": {
 							"raw": "http://127.0.0.1:5000/poc/v1/product/",
@@ -280,7 +281,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"product_name\": \"automne chaquet\",\r\n  \"price\": 220500,\r\n  \"detail\": \"chaquet of leather\"\r\n}"
+							"raw": "{\r\n  \"productName\": \"automne chaquet\",\r\n  \"price\": 220500,\r\n  \"detail\": \"chaquet of leather\"\r\n}"
 						},
 						"url": {
 							"raw": "http://127.0.0.1:5000/poc/v1/product/2",
@@ -350,7 +351,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"external_provider_name\": \"delicious jhons cake!\",\r\n  \"phone\": 5845632,\r\n  \"detail\": \"food provider\"\r\n}"
+							"raw": "{\r\n  \"externalProviderName\": \"delicious jhons cake!\",\r\n  \"phone\": 5845632,\r\n  \"detail\": \"food provider\"\r\n}"
 						},
 						"url": {
 							"raw": "http://127.0.0.1:5000/poc/v1/external-provider/",
@@ -473,7 +474,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"external_provider_name\": \"awesome jhons cake!\",\r\n  \"phone\": 1234567,\r\n  \"detail\": \"new update food provider\"\r\n}"
+							"raw": "{\r\n  \"externalProviderName\": \"awesome jhons cake!\",\r\n  \"phone\": 1234567,\r\n  \"detail\": \"new update food provider\"\r\n}"
 						},
 						"url": {
 							"raw": "http://127.0.0.1:5000/poc/v1/external-provider/2",

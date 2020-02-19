@@ -20,7 +20,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExternalProviderRoutes.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExternalProviderRoutes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes/ExternalProviderRoutes.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
@@ -89,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductTest.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProductTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/test/ProductTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            <state relative-caret-position="-153">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -101,8 +101,8 @@
       <file leaf-file-name="ExternalProviderTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/test/ExternalProviderTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="61">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -153,7 +153,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="93" />
     <option name="y" value="29" />
     <option name="width" value="1048" />
@@ -329,12 +329,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_ProductTest_ProductTestCase_test_product_creation_01 - 2020.02.16 at 21h 26m 35s.xml">
-      <configuration name="Unittests for ProductTest.ProductTestCase.test_product_creation_01" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_ProductTest_ProductTestCase_test_product_creation_01 - 2020.02.16 at 21h 38m 36s.xml">
-      <configuration name="Unittests for ProductTest.ProductTestCase.test_product_creation_01" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_ProductTest_ProductTestCase - 2020.02.16 at 22h 00m 55s.xml">
       <configuration name="Unittests for ProductTest.ProductTestCase" configurationId="tests" />
     </history-entry>
@@ -359,18 +353,24 @@
     <history-entry file="Unittests_in_ClientTest_py - 2020.02.18 at 18h 49m 00s.xml">
       <configuration name="Unittests in ClientTest.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_ExternalProviderTest_ExternalProviderTestCase - 2020.02.18 at 18h 57m 48s.xml">
+      <configuration name="Unittests for ExternalProviderTest.ExternalProviderTestCase" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_ProductTest_ProductTestCase_test_product_creation_01 - 2020.02.18 at 18h 57m 54s.xml">
+      <configuration name="Unittests for ProductTest.ProductTestCase.test_product_creation_01" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="93" y="29" width="1048" height="684" extended-state="0" />
+    <frame x="93" y="29" width="1048" height="684" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25247526" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25247526" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3864469" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3864469" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32967034" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -453,23 +453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/test/ProductTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/test/ExternalProviderTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Bill.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -509,6 +492,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="67" column="27" lean-forward="true" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/test/ExternalProviderTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/test/ProductTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
