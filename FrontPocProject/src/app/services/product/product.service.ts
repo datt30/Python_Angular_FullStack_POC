@@ -1,31 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Client } from "src/app/models/client";
+import { Product } from 'src/app/models/product';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class ClientService {
+export class ProductService {
   
   constructor(private http: HttpClient) {}
 
   url = 'http://127.0.0.1:5000/poc/v1';
   
-  public getAllClients() {
-    return this.http.get(`${this.url}/clients/`);
+  public getAllProducts() {
+    return this.http.get(`${this.url}/products/`);
   }
 
-  public createClient(client: Client) {
+  public createProduct(product: Product) {
     let httpHeaders = new HttpHeaders().set('Content-Type', 'application/json')
     let options = {
       headers: httpHeaders
     }; 
-    this.http.post(`${this.url}/client/`,{
-      "identityNumber":client.identityNumber,
-      "age": client.age,
-      "clientName": client.clientName,
-      "clientSurname": client.clientSurname
+    this.http.post(`${this.url}/product/`,{
+      "productName":product.productName,
+      "price": product.price,
+      "detail": product.detail
     },options).subscribe(
       (val) => {
           console.log("POST call successful value returned in body", val);
@@ -38,8 +37,8 @@ export class ClientService {
       });
   }
 
-  public deleteClient(id){
-    this.http.delete(`${this.url}/client/${id}`)
+  public deleteProduct(id){
+    this.http.delete(`${this.url}/product/${id}`)
     .subscribe(
         (val) => {
             console.log("DELETE call successful value returned in body", val);
@@ -52,16 +51,15 @@ export class ClientService {
         });
   }
 
-  public updateClient(client: Client) {
+  public updateProduct(product: Product) {
     let httpHeaders = new HttpHeaders().set('Content-Type', 'application/json')
     let options = {
       headers: httpHeaders
     }; 
-    this.http.put(`${this.url}/client/${client.identityNumber}`,{
-      "identityNumber":client.identityNumber,
-      "age": client.age,
-      "clientName": client.clientName,
-      "clientSurname": client.clientSurname
+    this.http.put(`${this.url}/product/${product.productName}`,{
+      "productName":product.productName,
+      "price": product.price,
+      "detail": product.detail
     },options).subscribe(
       (val) => {
           console.log("POST call successful value returned in body", val);
@@ -73,11 +71,6 @@ export class ClientService {
           console.log("The POST observable is now completed.");
       });
   }
-
-
-
-
-
 
 
 

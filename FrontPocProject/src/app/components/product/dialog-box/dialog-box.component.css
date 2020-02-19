@@ -1,0 +1,16 @@
+.fields-content {
+    display: flex;
+    flex-direction: column;
+}
+  
+.fields-content > * {
+    width: 100%;
+}
+
+.buttons-content {
+    float: right;
+}
+
+.mat-form-field{
+    margin-bottom: 15px;
+}
